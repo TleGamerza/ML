@@ -16,10 +16,10 @@ stress_model = pickle.load(open("stress_model.sav",'rb'))
 
 
 with st.sidebar:
-    selected = option_menu('Classification',['LOAN','RidingMower','stress'])
+    selected = option_menu('Classification',['LOAN','RidingMower','Stress'])
 
-    if(selected == 'stress'):
-    st.title('stress Prediction')
+    if(selected == 'Stress'):
+    st.title('Stress Prediction')
     
     #user input
     Age = st.text_input('Age')
