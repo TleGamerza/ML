@@ -19,23 +19,23 @@ with st.sidebar:
     selected = option_menu('Classification',['LOAN','RidingMower','stress'])
 
     if(selected == 'stress'):
-    st.title('stress Prediction')
+        st.title('stress Prediction')
     
-    #user input
-    Age = st.text_input('Age')
-    Gender = st.text_input('Gender')
-    Occupation = st.text_input('Occupation')
-    Device_Type = st.text_input('Device_Type')
-    Daily_Phone_Hours = st.text_input('Daily_Phone_Hours')
-    Social_Media_Hours = st.text_input('Social_Media_Hours')
-    Work_Productivity_Score = st.text_input('Work_Productivity_Score')
-    Sleep_Hours = st.text_input('Sleep_Hours')
-    App_Usage_Count = st.text_input('App_Usage_Count')
-    Caffeine_Intake_Cups = st.text_input('Caffeine_Intake_Cups')
-    Weekend_Screen_Time_Hours = st.text_input('Weekend_Screen_Time_Hours')
+            #user input
+        Age = st.text_input('Age')
+        Gender = st.text_input('Gender')
+        Occupation = st.text_input('Occupation')
+        Device_Type = st.text_input('Device_Type')
+        Daily_Phone_Hours = st.text_input('Daily_Phone_Hours')
+        Social_Media_Hours = st.text_input('Social_Media_Hours')
+        Work_Productivity_Score = st.text_input('Work_Productivity_Score')
+        Sleep_Hours = st.text_input('Sleep_Hours')
+        App_Usage_Count = st.text_input('App_Usage_Count')
+        Caffeine_Intake_Cups = st.text_input('Caffeine_Intake_Cups')
+        Weekend_Screen_Time_Hours = st.text_input('Weekend_Screen_Time_Hours')
    
     
-    stress_predict = ''
+        stress_predict = ''
     
     if st.button('Predict'):
         stress_predict = stress_model.predict([[
