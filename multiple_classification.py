@@ -16,10 +16,10 @@ stress_model = pickle.load(open("stress_model.sav",'rb'))
 
 
 with st.sidebar:
-    selected = option_menu('Classification',['LOAN','RidingMower','stress'])
+    selected = option_menu('Classification',['LOAN','RidingMower','Stress'])
 
-    if(selected == 'stress'):
-        st.title('stress Prediction')
+    if(selected == 'Stress'):
+        st.title('Stress Prediction')
             #user input
         Age = st.text_input('Age')
         Gender = st.text_input('Gender')
@@ -33,7 +33,7 @@ with st.sidebar:
         Caffeine_Intake_Cups = st.text_input('Caffeine_Intake_Cups')
         Weekend_Screen_Time_Hours = st.text_input('Weekend_Screen_Time_Hours')
 
-        stress_predict = ''
+        Stress_predict = ''
     
     if st.button('Predict'):
         stress_predict = stress_model.predict([[
@@ -49,7 +49,8 @@ with st.sidebar:
             float(Caffeine_Intake_Cups),
             float(Weekend_Screen_Time_Hours)
         ]])     
-    st.success(stress_predict)
+    st.success(Stress_predict)
+
 
 if(selected == 'RidingMower'):
     st.title('RidingMower Prediction')
