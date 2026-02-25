@@ -20,7 +20,6 @@ with st.sidebar:
 
     if(selected == 'stress'):
         st.title('stress Prediction')
-    
             #user input
         Age = st.text_input('Age')
         Gender = st.text_input('Gender')
@@ -33,8 +32,7 @@ with st.sidebar:
         App_Usage_Count = st.text_input('App_Usage_Count')
         Caffeine_Intake_Cups = st.text_input('Caffeine_Intake_Cups')
         Weekend_Screen_Time_Hours = st.text_input('Weekend_Screen_Time_Hours')
-   
-    
+
         stress_predict = ''
     
     if st.button('Predict'):
@@ -50,8 +48,7 @@ with st.sidebar:
             float(App_Usage_Count),
             float(Caffeine_Intake_Cups),
             float(Weekend_Screen_Time_Hours)
-        ]])
-        
+        ]])     
     st.success(stress_predict)
 
 if(selected == 'RidingMower'):
